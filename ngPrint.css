@@ -5,12 +5,14 @@
 }
 
 @media print {
-    body * {
-        display:none;
+    /* 20161031RBP - only want children invisible, not all descendants */
+    body > * {
+        display:none !important;
     }
 
-    #printSection, #printSection * {
-        display: inline;
+    /* 20161031RBP - changed to display block */
+    #printSection {
+        display: block !important;
     }
 
     #printSection {
