@@ -19,6 +19,10 @@
                 if (elemToPrint) {
                     printElement(elemToPrint);
                 }
+
+                /* 20161031RBP - Prevent reload on cancel by returning false */
+                /* see http://stackoverflow.com/questions/4194990/window-print-refreshes-page-in-iframe-when-i-click-cancel */
+                return false;
             });
 
             if (window.matchMedia) {
